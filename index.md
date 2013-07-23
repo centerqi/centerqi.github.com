@@ -1,46 +1,38 @@
 ---
 layout: page
-title: Hello World!
+title: thinking
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
 
-Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
+##码农
+没有程序员证的码农,和如下几位交情不错 `php, python, c`   
+爱翻源码,给 `php, nginx`做过内科手术  
+以前混饭于百度,现安居于口袋  
+##爱折腾
+linux是一个怎么折腾都可以的平台  
+`智能家居`爱好者  
+`Raspberry Pi`(树莓派)
 
-Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
+##命令控
+键盘是最好的交互工具   
+用 `vim` 并且仅用`vim`   
+`links`是最爱的浏览器   
+`mutt`是最好的邮件客户端  
+`markdown, github`追随者  
 
-## Update Author Attributes
+##数据控
+以前是数据搬运工,现在是数据抽取工  
+常用农具为 `mysql,hadoop, pig, R, Hive, Mahout`  
 
-In `_config.yml` remember to specify your own data:
-    
-    title : My Blog aaa =)
-    
-    author :
-      name : Name Lastname
-      email : blah@email.test
-      github : username
-      twitter : username
+##湘菜
+`肥锅肉`, `剁椒鱼头`, `湘菜粉` 
 
-The theme should reference these variables whenever needed.
-    
-## Sample Posts
-
-This blog contains sample posts which help stage pages and blog data.
-When you don't need the samples anymore just delete the `_posts/core-samples` folder.
-
-    $ rm -rf _posts/core-samples
-
-Here's a sample "posts list".
 
 <ul class="posts">
   {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+    <li><span>{{ post.date | date:"%Y-%m-%d" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
-
-## To-Do
-
-This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/plusjade/jekyll-bootstrap)!
-We need to clean up the themes, make theme usage guides with theme-specific markup examples.
 
 
