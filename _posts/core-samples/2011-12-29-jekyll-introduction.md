@@ -1,8 +1,7 @@
 ---
 layout: post
-category : lessons
-tagline: "Supporting tagline"
-tags : [intro, beginner, jekyll, tutorial]
+category : git
+tags : [git]
 ---
 {% include JB/setup %}
 
@@ -90,8 +89,8 @@ Jekyll expects your website directory to be laid out like so:
     |   |-- default.html
     |   |-- post.html
     |-- _posts
-    |   |-- 2011-10-25-open-source-is-good.markdown
-    |   |-- 2011-04-26-hello-world.markdown
+    |   |-- 20011-10-25-open-source-is-good.markdown
+    |   |-- 20011-04-26-hello-world.markdown
     |-- _site
     |-- index.html
     |-- assets
