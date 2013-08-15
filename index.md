@@ -23,7 +23,7 @@ linux是一个怎么折腾都可以的平台
 
 ##数据控
 以前是数据搬运工,现在是数据抽取工  
-常用农具为 `mysql,hadoop, pig, R, Hive, Mahout`  
+常用农具为 `mysql,hadoop, pig, R, Hive, Mahout,hbase`  
 
 ##湘菜
 `肥锅肉`, `剁椒鱼头`, `湘菜粉` 
