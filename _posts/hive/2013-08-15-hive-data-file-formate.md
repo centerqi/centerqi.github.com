@@ -5,7 +5,6 @@ tags : [java]
 ---
 {% include JB/setup %}
 
-#hive data types and file formats
 
 一看上次写的hive 笔记，时间真是把刀，距离hive的安装已经快四个月了，这其间事情太多，怎么没有好好把hive 总结一下
  
