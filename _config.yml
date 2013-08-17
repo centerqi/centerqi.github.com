@@ -10,7 +10,7 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : thinking 
-tagline:peace 
+tagline: Site Tagline
 author :
   name : centerqi 
   email : centerqi@gmail.com 
