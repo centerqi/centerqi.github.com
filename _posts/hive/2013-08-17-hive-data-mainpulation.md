@@ -8,13 +8,13 @@ tags : [hive]
 ##Loading Data into Managed Tables
 
 >This command will first create the directory for the partition, if it doesn’t already exist,
-then copy the data to it.
-If the target table is not partitioned, you omit the PARTITIONclause.
-
+>then copy the data to it.
+>If the target table is not partitioned, you omit the PARTITIONclause.
+>
 >`OVERWRITE` keyword, any data already present in the target directory
-will be deleted first. Without the keyword, the new files are simply added to the target
-directory. However, if files already exist in the target directory that match filenames
-being loaded, the old files are overwritten.
+>will be deleted first. Without the keyword, the new files are simply added to the target
+>directory. However, if files already exist in the target directory that match filenames
+>being loaded, the old files are overwritten.
 
 >If the  `LOCAL` keyword is used, the path is assumed to be in the local filesystem. The data
 is  copiedinto the final location. If  LOCALis omitted, the path is assumed to be in the
