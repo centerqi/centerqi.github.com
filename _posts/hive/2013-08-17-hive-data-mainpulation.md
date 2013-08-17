@@ -17,7 +17,7 @@ tags : [hive]
 >being loaded, the old files are overwritten.
 
 >If the  `LOCAL` keyword is used, the path is assumed to be in the local filesystem. The data
->is  copiedinto the final location. If  LOCALis omitted, the path is assumed to be in the
+>is  copied into the final location. If  LOCALis omitted, the path is assumed to be in the
 >distributed filesystem.
 
 
