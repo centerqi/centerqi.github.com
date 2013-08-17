@@ -5,7 +5,7 @@ tags : [hive]
 ---
 {% include JB/setup %}
 
-##Loading Data into Managed Tables
+###Loading Data into Managed Tables
 
 >This command will first create the directory for the partition, if it doesn’t already exist,
 >then copy the data to it.
@@ -17,19 +17,19 @@ tags : [hive]
 >being loaded, the old files are overwritten.
 
 >If the  `LOCAL` keyword is used, the path is assumed to be in the local filesystem. The data
-is  copiedinto the final location. If  LOCALis omitted, the path is assumed to be in the
-distributed filesystem.
+>is  copiedinto the final location. If  LOCALis omitted, the path is assumed to be in the
+>distributed filesystem.
 
 
 >The `PARTITION` clause is required if the table is partitioned and you must specify a value
-for each partition key.
+>for each partition key.
 
     LOAD DATA LOCAL INPATH '${env:HOME}/california-employees'
     OVERWRITE INTO TABLE employees
     PARTITION (country = 'US', state = 'CA');
 
 
-##Inserting Data into Tables from Queries
+###Inserting Data into Tables from Queries
 
     INSERT OVERWRITE TABLE employees
     PARTITION (country = 'US', state = 'OR')
@@ -49,10 +49,10 @@ for each partition key.
     PARTITION (country = 'US', state = 'IL')
     SELECT * WHERE se.cnty = 'US' AND se.st = 'IL';
 
-##Dynamic Partition Inserts
+###Dynamic Partition Inserts
 
 >Hive determines the values of the partition keys, countryand state, from the `last two columns` in the  SELECTclause
-Dynamic partitioning is not enabled by default. When it is enabled, it works in “strict” mode by default, where it expects at least some columns to be static.
+>Dynamic partitioning is not enabled by default. When it is enabled, it works in “strict” mode by default, where it expects at least some columns to be static.
 
     set hive.exec.dynamic.partition=true;
     set hive.exec.dynamic.partition.mode=nonstrict;
@@ -63,7 +63,7 @@ Dynamic partitioning is not enabled by default. When it is enabled, it works in 
     SELECT ..., se.cnty, se.st
     FROM staged_employees se;
 
-##Creating Tables and Loading Them in One Query
+###Creating Tables and Loading Them in One Query
 
 >This feature can’t be used with external tables. 
 
@@ -72,7 +72,7 @@ Dynamic partitioning is not enabled by default. When it is enabled, it works in 
     FROM employees
     WHERE se.state = 'CA';
 
-##Exporting Data
+###Exporting Data
 
     INSERT OVERWRITE LOCAL DIRECTORY '/tmp/ca_employees'
     SELECT name, salary, address
