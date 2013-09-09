@@ -6,7 +6,7 @@ tags : [pig]
 {% include JB/setup %}
 
 
-在pig里面计算有多少个，经常用COUNT(xx) 之类的，但是不能像SQL那样直接COUNT(*)，得先GROUP,然后再FOREACH,COUNT();
+在pig里面计算有多少个，经常用COUNT(xx) 之类的，但是不能像SQL那样直接COUNT(xx)，得先GROUP,然后再FOREACH,COUNT();
 
 FOREACH里面能写很多语句，如FILTER之类的，但是发现一个问题，就是FOREACH里面包有FILTER,DISTICT的时候，就是有一个REDUCE完成的特别慢。
 
@@ -80,6 +80,6 @@ FOREACH里面能写很多语句，如FILTER之类的，但是发现一个问题�
 
 [Apache Pig’s Optimizer](ftp://ftp.research.microsoft.com/pub/debull/A13mar/gates.pdf 'apache pig 优化')
 
-[apache-pig-performance-optimizations-talk-at-apachecon-2010](http://www.slideshare.net/thejasmn/apache-pig-performance-optimizations-talk-at-apachecon-2010 '')
+[apache-pig-performance-optimizations-talk-at-apachecon-2010](http://www.slideshare.net/thejasmn/apache-pig-performance-optimizations-talk-at-apachecon-2010 'apache-pig-performance-optimizations-talk-at-apachecon-2010')
 
-[apache pig](http://pig.apache.org/docs/r0.9.1/perf.html '')
+[apache pig](http://pig.apache.org/docs/r0.9.1/perf.html 'apache pig')
