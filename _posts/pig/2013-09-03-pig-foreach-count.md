@@ -40,7 +40,9 @@ FOREACH里面能写很多语句，如FILTER之类的，但是发现一个问题�
 [stackover flow 关于 NESTED FOREACH 的讨论](http://stackoverflow.com/questions/10732456/how-to-optimize-a-group-by-statement-in-pig-latin 'NESTED FOREACH')
 
 1、优化的原则，尽量减少 NESTED FOREACH里面的操作数，把 FILTER 移除。
+
 2、在业务逻辑上并行，如list,item,jump,favorite可以用platform,requesturl来做分组.
+
 3、站点 UV 可以先做DISTINCT，这样减少数据量。
 
 
