@@ -75,7 +75,6 @@ FOREACH里面能写很多语句，如FILTER之类的，但是发现一个问题�
     sys     0m26.683s
 
 
-
 找了很多资料参考关于 hadoop pig skewed group
 
 [Apache Pig’s Optimizer](ftp://ftp.research.microsoft.com/pub/debull/A13mar/gates.pdf 'apache pig 优化')
