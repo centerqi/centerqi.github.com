@@ -34,7 +34,7 @@ pig 输出结果
     (taobao1,1,2)
     (taobao2,1,0)
 
-发现原来taobao2的 UV为 0, 而PV为1.
+发现原来taobao2的 UV为 1, 而PV为0.
 
 用EXPLAIN看了一下 MAPREDUCER的实现
 
