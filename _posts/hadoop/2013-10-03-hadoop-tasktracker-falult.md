@@ -8,20 +8,20 @@ tags : [hadoop]
 几个配置
 
 
-###1. mapred.tasktracker.expiry.interval
+###1. `mapred.tasktracker.expiry.interval`
 
 Default:600000(10 * 60 * 1000) 默认为10分钟
 
 Expert: The time-interval, in miliseconds, after which a tasktracker is declared 'lost' if it doesn't send heartbeats.
 
-###2. mapred.max.tracker.failures
+###2. `mapred.max.tracker.failures`
 
 Default:4
 
 Expert:The number of task-failures on a tasktracker of a given job after which new tasks of that job aren't assigned to it.
 
 
-###3. mapred.max.tracker.blacklists
+###3. `mapred.max.tracker.blacklists`
 
 Default:4
 
@@ -33,7 +33,7 @@ The tracker will be given a tasks later (after a day). The tracker will become a
 
 此tracker 被加入job blacklist的次数，也就是有多少个job把此tracker 加入了blacklist
 
-###4. mapred.cluster.average.blacklist.threshold
+###4. `mapred.cluster.average.blacklist.threshold`
 
 Default:0.5
 
