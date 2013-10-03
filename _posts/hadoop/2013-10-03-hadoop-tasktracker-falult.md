@@ -7,6 +7,7 @@ tags : [hadoop]
 
 几个配置
 
+
 1. mapred.tasktracker.expiry.interval
 
 Default:600000(10 * 60 * 1000) 默认为10分钟
@@ -43,13 +44,6 @@ expert:number of faults (per-job blacklistings) for given node is more
 than (1 + AVERAGE_BLACKLIST_THRESHOLD) times the average number
 
 of faults across all nodes (configurable)
-
-5.
-    // The maximum fraction (range [0.0-1.0]) of nodes in cluster allowed to be
-    // added to the all-jobs blacklist via heuristics.  By default, no more than
-    // 50% of the cluster can be heuristically blacklisted, but the external
-    // node-healthcheck script is not affected by this.
-    private static double MAX_BLACKLIST_FRACTION = 0.5;
 
 
 >JobTracker 将记录每个TaskTracker 被作业加入黑名单的次数 #blacklist。当某个TaskTracker 同时满足以下条件时，将被加入 JobTracker的灰名单中。
@@ -102,5 +96,15 @@ of faults across all nodes (configurable)
       }
       return false;
     }
+
+
+    /* The maximum fraction (range [0.0-1.0]) of nodes in cluster allowed to be
+    // added to the all-jobs blacklist via heuristics.  By default, no more than
+    // 50% of the cluster can be heuristically blacklisted, but the external
+    // node-healthcheck script is not affected by this.
+    */
+    private static double MAX_BLACKLIST_FRACTION = 0.5;
+
+
 
 [mapred-default](http://archive.cloudera.com/cdh/3/hadoop/mapred-default.html 'maprd-default')
