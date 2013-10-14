@@ -75,3 +75,7 @@ The main advantage of Remote mode over Local mode is that Remote mode does not r
       <value>com.mysql.jdbc.Driver</value>
       <description>Driver class name for a JDBC metastore</description>
     </property>
+
+[三种模式的区别](http://www.cloudera.com/content/cloudera-content/cloudera-docs/CDH4/4.2.0/CDH4-Installation-Guide/cdh4ig_topic_18_4.html '三种模式的区别')
+
+[三种模式的参数详解](https://cwiki.apache.org/confluence/display/Hive/AdminManual+MetastoreAdmin '三种模式的参数详解')
