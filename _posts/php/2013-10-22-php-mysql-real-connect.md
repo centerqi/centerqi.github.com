@@ -40,7 +40,7 @@ tags : [php]
 ###vio_poll_read
 最后会调用 vio_poll_read这个函数
 这个函数的最终实现如下
-<img src="po11111.jpg" />
+<img src="/assets/images/po11111.jpg" />
 
 
 
