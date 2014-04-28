@@ -1,21 +1,35 @@
 ---
 layout: post
-category : php
-tags : [php, md5, raw]
+category : java 
+tags : [java]
 ---
 {% include JB/setup %}
 
 
 公司有A，B机房，一般大一点的公司，都会做容灾，A机房的一个程序要调用INTERNET的POP3服务，不知道为什么，去A机房的线路被挖断了，但是A,B机房通过内网是可以通的。
 
+
+
 用nginx的mail模块，做了一个代理，让A机房的评论服务先访问B机房的NGINX认证模块，因为B机房是可以通外网的。
+
+
+
 
 总结如下，说不定哪天又被挖断了，挖断了，没一天是服务没法正常的。
 
 
+
+
+
 auth_http是发送接收http请求的脚本，让这个pop3auth.php访问外网。
 
+
+
+
 nginx配置如下
+
+
+
 
 
     imap {
@@ -37,7 +51,11 @@ nginx配置如下
     }
 
 
+
+
 php代码如下
+
+
 
 
     $username=$_SERVER["HTTP_AUTH_USER"] ;
