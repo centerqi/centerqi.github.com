@@ -17,6 +17,7 @@ auth_http是发送接收http请求的脚本，让这个pop3auth.php访问外网�
 
 nginx配置如下
 
+
     imap {
             auth_http  10.2.8.50:8888/pop3auth.php;
             pop3_capabilities  "TOP"  "USER";
