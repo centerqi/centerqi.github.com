@@ -127,78 +127,25 @@ agent 的channel 为 memroy
 Flume 配置一个写HDFS的Agent
 如上面ihive_agent把数据写往了 10.1.15.199的机器，在199上面必须弄一个Agent，此ageng接收到数据，然后写入hdfs
 
-    res_collector.sources = avro-collection-source
-    res_collector.channels = memoryChannel
-    res_collector.sinks = hdfs-sink
+res_collector.sources = avro-collection-source
+res_collector.channels = memoryChannel
+res_collector.sinks = hdfs-sink
+#
+# # For each one of the sources, the type is defined
+res_collector.sources.avro-collection-source.type = avro
+res_collector.sources.avro-collection-source.bind = 0.0.0.0
+res_collector.sources.avro-collection-source.port = 60001
+res_collector.sources.avro-collection-source.interceptors = i1 i2 i3
 
-    res_collector.sources.avro-collection-source.type = avro
-    res_collector.sources.avro-collection-source.bind = 0.0.0.0
-    res_collector.sources.avro-collection-source.port = 60001
-    res_collector.sources.avro-collection-source.interceptors = i1 i2 i3
+res_collector.sources.avro-collection-source.interceptors.i1.type = org.apache.flume.interceptor.HostInterceptor$Builder 
+res_collector.sources.avro-collection-source.interceptors.i1.preserveExisting = faluse 
+#res_collector.sources.avro-collection-source.interceptors.i1.hostHeader = hostname 
 
-    res_collector.sources.avro-collection-source.interceptors.i1.type = org.apache.flume.interceptor.HostInterceptor$Builder 
-    res_collector.sources.avro-collection-source.interceptors.i1.preserveExisting = faluse 
-
-    res_collector.sources.avro-collection-source.interceptors.i2.type = org.apache.flume.interceptor.TimestampInterceptor$Builder 
-
-    res_collector.sources.avro-collection-source.interceptors.i3.type = static 
-    res_collector.sources.avro-collection-source.interceptors.i3.key = datacenter
-    res_collector.sources.avro-collection-source.interceptors.i3.value =Beijing
-
-    res_collector.sources.avro-collection-source.channels = memoryChannel
-
-    res_collector.sinks.hdfs-sink.type = hdfs
-    res_collector.sinks.hdfs-sink.hdfs.path = hdfs://idc02-hd-ds-01:9000/user/www/udc/tmp/flume/audi
-    res_collector.sinks.hdfs-sink.hdfs.writeFormat =Text 
-    #res_collector.sinks.hdfs-sink.hdfs.fileType=DataStream #此类型无法压缩
-    res_collector.sinks.hdfs-sink.hdfs.fileType=CompressedStream
-    res_collector.sinks.hdfs-sink.hdfs.rollSize=0
-    res_collector.sinks.hdfs-sink.hdfs.rollCount=0
-    res_collector.sinks.hdfs-sink.hdfs.rollInterval=30 #多长时间切分一个文件
-    res_collector.sinks.hdfs-sink.hdfs.codeC=gzip #压缩类型
-    #res_collector.sinks.hdfs-sink.hdfs.filePrefix=%{filename}.%{host}.%Y-%m-%d
-    #res_collector.sinks.hdfs-sink.hdfs.filePrefix=%{tailSrcFile}.%Y-%m-%d
-    res_collector.sinks.hdfs-sink.hdfs.filePrefix=%{datacenter}.%{host}.%{file_base_name}.%Y-%m-%d
-    #collector.sinks.hdfs-sink.serializer = avro_event
-    #collector.sinks.hdfs-sink.fileType = DataStream
-    res_collector.sinks.hdfs-sink.channel = memoryChannel
-    res_collector.channels.memoryChannel.type = memory
-    res_collector.channels.memoryChannel.capacity = 1000000
+res_collector.sources.avro-collection-source.interceptors.i2.type = org.apache.flume.interceptor.TimestampInterceptor$Builder 
 
 
-因为Memory Channel感觉不太靠普，所以最好能用 File Channel
-
-###Flume配置 File Channel
-
-    res_agent.sources = spooldirSource
-    res_agent.channels = fileChannel
-    res_agent.sinks = avro-forward-res
-
-    res_agent.sources.spooldirSource.type=spooldir
-    res_agent.sources.spooldirSource.spoolDir=/data/logs/access.log/
-    res_agent.sources.spooldirSource.channels=fileChannel
-    res_agent.sources.spooldirSource.ignorePattern=[^current]
-    res_agent.sources.spooldirSource.fileHeader=true
-    res_agent.sources.spooldirSource.fileHeaderKey=file_name
-    res_agent.sources.spooldirSource.basenameHeader=true
-    res_agent.sources.spooldirSource.consumeOrder=youngest
-    res_agent.sources.spooldirSource.basenameHeaderKey=file_base_name
-    res_agent.sources.spooldirSource.deserializer=org.apache.flume.sink.solr.morphline.BlobDeserializer$Builder
-    res_agent.sources.spooldirSource.deserializer.maxBlobLength = 20000000
-    res_agent.sources.spooldirSource.batchSize=1
-
-
-
-
-
-    res_agent.sinks.avro-forward-res.type=avro
-    res_agent.sinks.avro-forward-res.hostname=10.1.15.199
-    res_agent.sinks.avro-forward-res.port=60001
-    res_agent.sinks.avro-forward-res.channel = fileChannel 
-
-    res_agent.channels.fileChannel.type=file
-    res_agent.channels.fileChannel.checkpointDir=/home/rd/apache-flume-1.5.0-bin/data/c #配置检查点目录
-    res_agent.channels.fileChannel.dataDirs=/home/rd/apache-flume-1.5.0-bin/data/d #配置数据目录
-
+res_collector.sources.avro-collection-source.interceptors.i3.type = static 
+res_collector.sources.avro-collection-source.interceptors.i3.key = datacenter
+res_collector.sources.avro-collection-source.interceptors.i3.value =Beijing
 
 
