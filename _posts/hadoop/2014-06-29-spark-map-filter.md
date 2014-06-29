@@ -97,8 +97,16 @@ tags : [spark]
 
         });
 
+        #save count to hdfs
 
-        guids.saveAsTextFile(args[1]);
+        JavaRDD<String> distinctGuid = guids.distinct();
+        Long countGuid = distinctGuid.count();
+
+        List<Long> data = Arrays.asList(countGuid);
+        JavaRDD<Long> distData = jsc.parallelize(data);
+        distData.saveAsTextFile(args[1]);
+
+        //guids.saveAsTextFile(args[1]);
         jsc.stop();
       }
 
