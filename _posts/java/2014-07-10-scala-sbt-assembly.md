@@ -43,7 +43,7 @@ Scala 打包工具还是很不错的，也有maven那样的功能，把整个项
 
 完整的build.sbt文件如下
 
-    `import AssemblyKeys._` 
+    import AssemblyKeys._ 
 
     name := "scalaproxy"
 
