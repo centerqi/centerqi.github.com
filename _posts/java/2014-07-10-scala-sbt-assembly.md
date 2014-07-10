@@ -29,13 +29,13 @@ Scala 打包工具还是很不错的，也有maven那样的功能，把整个项
 
 2. 在要目录创建 assembly.sbt文件,内容如下
 
-    import AssemblyKeys._
+    `import AssemblyKeys._`
 
     assemblySettings
 
 3. 在build.sbt内容的第一行添加
     
-    import AssemblyKeys._ 
+    `import AssemblyKeys._`
 
 4. 在build.sbt内容的最后一行添加
 
@@ -43,7 +43,7 @@ Scala 打包工具还是很不错的，也有maven那样的功能，把整个项
 
 完整的build.sbt文件如下
 
-    import AssemblyKeys._ 
+    `import AssemblyKeys._` 
 
     name := "scalaproxy"
 
