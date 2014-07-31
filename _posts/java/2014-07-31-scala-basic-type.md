@@ -103,5 +103,26 @@ scala 可以用 unary_ 方法处理 prefix notation
 
 方便了不少，但是感觉还是直接用 BigDecimal就可以了。
 
+###Rich Operators
 
+    code                           Result
+    0 max 5                        5 
+    0 min 5                        0
+    -2.7 abs                       2.7
+    -2.7 round                     -3L
+    1.5 isInfinity                 false
+    (1.0 / 0) isInfinity 4 to 6    Range(4.5.6)
+    "bob" capitalize               "Bob"
+    "robert" drop 2                "bert"
 
+如果要知道每种基本类型，有哪一些Rich 操作
+
+可以查询
+
+    scala.runtime.RichXXX 之类的文档
+
+    scala.runtime.RichInt
+
+但是String 的在 
+
+    scala.collection.immutable.StringOps
