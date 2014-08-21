@@ -84,7 +84,9 @@ yarn可以设置内存的地方比较多，从hdp找到了几个参数
 
 MIN_CONTAINER_SIZE 参考
 
-<table border="1" class="MsoNormalTable" style="margin-left:4.5pt;border-collapse:collapse;mso-table-layout-alt:fixed;  border:none;mso-border-alt:solid black 1.0pt;mso-yfti-tbllook:1184;mso-padding-alt:  0in .5pt 0in .5pt;mso-border-insideh:1.0pt solid black;mso-border-insidev:  1.0pt solid black" width="432" id="d6e1249"><colgroup><col width="209pt"><col width="217pt"></colgroup><tbody><tr>
+<table class="table table-striped table-bordered">
+<tbody>
+<tr>
                     <td valign="top">
                         <span class="bold"><strong>Total RAM per Node</strong></span>
                     </td>
@@ -106,7 +108,11 @@ MIN_CONTAINER_SIZE 参考
                 </tr></tbody></table>
 
 
-<table border="1" class="MsoNormalTable" style="margin-left:4.5pt;border-collapse:collapse;mso-table-layout-alt:fixed;  border:none;mso-border-alt:solid black 1.0pt;mso-yfti-tbllook:1184;mso-padding-alt:  0in .5pt 0in .5pt;mso-border-insideh:1.0pt solid black;mso-border-insidev:  1.0pt solid black" width="778" id="d6e1274"><colgroup><col width="180pt"><col width="300pt"><col width="300pt"></colgroup><tbody><tr>
+
+###具体计算公式
+
+<table class="table table-striped table-bordered">
+<tbody><tr>
                 <td valign="top">
                     <span class="bold"><strong>Configuration File</strong></span>
                 </td>
