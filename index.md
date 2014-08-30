@@ -15,15 +15,11 @@ linux是一个怎么折腾都可以的平台
 `Raspberry Pi`(树莓派)
 
 ##命令控
-键盘是最好的交互工具   
-用 `vim` 并且仅用`vim`   
-`links`是最爱的浏览器   
-`mutt`是最好的邮件客户端  
-`markdown, github`追随者  
+`vim`,`links`,`mutt`,`markdown`,`github`
 
 ##数据控
 以前是数据搬运工,现在是数据抽取工  
-常用农具为 `mysql,hadoop, pig, R, Hive, Mahout,hbase`  
+常用农具为 `mysql,hadoop, pig, R, Hive, Mahout,hbase,spark,flume`  
 
 ##湘菜
 `肥锅肉`, `剁椒鱼头`, `湘菜粉` 
