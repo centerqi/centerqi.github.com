@@ -14,7 +14,7 @@ tags : [scala]
     -DarchetypeGroupId=org.scala-tools.archetypes \
     -DarchetypeArtifactId=scala-archetype-simple  \
     -DremoteRepositories=http://scala-tools.org/repo-releases \
-    -DgroupId=com.koudai.spark.job \
+    -DgroupId=com.hello.spark.job \
     -DartifactId=sparkjob \
     -Dversion=1.1.0
 
@@ -22,7 +22,7 @@ tags : [scala]
 
     <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
       <modelVersion>4.0.0</modelVersion>
-      <groupId>com.koudai.spark.job</groupId>
+      <groupId>com.hello.spark.job</groupId>
       <artifactId>sparkjob</artifactId>
       <version>1.1.0</version>
       <name>${project.artifactId}</name>
