@@ -218,4 +218,4 @@ tags : [scala]
 
 
 
-
+maven打包确实用[maven-shade-plugin](http://maven.apache.org/plugins/maven-shade-plugin/examples/includes-excludes.html 'http://maven.apache.org/plugins/maven-shade-plugin/examples/includes-excludes.html') 这个插件很方便，能省去很多事，最重要的是可以控制，那些jar要打进来，哪一些可以排除。
