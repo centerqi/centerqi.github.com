@@ -15,8 +15,8 @@ Flume 使用过程中碰到一个很诡异的问题，就是当server端挂了�
 
 先来看正常启动的过程。
 
-  2014-10-11 22:48:56,818 (lifecycleSupervisor-1-1) [DEBUG - org.apache.flume.api.NettyAvroRpcClient.configure(NettyAvroRpcClient.java:505)] Batch size string = 500
-  2014-10-11 22:48:56,827 (lifecycleSupervisor-1-1) [WARN - org.apache.flume.api.NettyAvroRpcClient.configure(NettyAvroRpcClient.java:630)] Using default maxIOWorkers
+    2014-10-11 22:48:56,818 (lifecycleSupervisor-1-1) [DEBUG - org.apache.flume.api.NettyAvroRpcClient.configure(NettyAvroRpcClient.java:505)] Batch size string = 500
+    2014-10-11 22:48:56,827 (lifecycleSupervisor-1-1) [WARN - org.apache.flume.api.NettyAvroRpcClient.configure(NettyAvroRpcClient.java:630)] Using default maxIOWorkers
     2014-10-11 22:48:57,518 (lifecycleSupervisor-1-1) [DEBUG - org.apache.flume.sink.AbstractRpcSink.createConnection(AbstractRpcSink.java:231)] Rpc sink k2: Created RpcClient: NettyAvroRpcClient { host: 10.2.8.11, port: 1463 }
     2014-10-11 22:48:57,518 (lifecycleSupervisor-1-1) [INFO - org.apache.flume.sink.AbstractRpcSink.start(AbstractRpcSink.java:303)] Rpc sink k2 started.
     2014-10-11 22:48:57,519 (SinkRunner-PollingRunner-DefaultSinkProcessor) [DEBUG - org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:143)] Polling sink runner starting
