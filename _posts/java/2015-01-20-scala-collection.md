@@ -12,13 +12,13 @@ scala 的集合很强大，并且有mutable 和immutable的区别，每一个都
 
 ###scala 的完全使用手册
 
-[scala collections-api]('http://www.scala-lang.org/docu/files/collections-api/collections.html' 'http://www.scala-lang.org/docu/files/collections-api/collections.html')
+[scala collections-api](http://www.scala-lang.org/docu/files/collections-api/collections.html 'http://www.scala-lang.org/docu/files/collections-api/collections.html')
 
 ###scala 怎么样用效果最好
 
 [effectivescala Collections](http://twitter.github.io/effectivescala/#Collections 'http://twitter.github.io/effectivescala/#Collections')
 
-[scala collections ]('http://www.artima.com/pins1ed/collections.html' 'http://www.artima.com/pins1ed/collections.html')
+[scala collections ](http://www.artima.com/pins1ed/collections.html 'http://www.artima.com/pins1ed/collections.html')
 
 
 
