@@ -13,5 +13,7 @@ scala 的implicit 很有意思，先把搜集到的资料整理一下，然后�
 
 [中文总结的不错，有代码](http://www.cnblogs.com/rollenholt/p/4118567.html 'http://www.cnblogs.com/rollenholt/p/4118567.html')
 
+[Scala类型参数中协变(+)、逆变（-）、类型上界(<:)和类型下界(>:)的使用](http://www.iteye.com/topic/477994 'http://www.iteye.com/topic/477994')
+
 
 
