@@ -1,0 +1,62 @@
+---
+layout: post
+category : php 
+tags : [php]
+---
+{% include JB/setup %}
+
+
+app时代，验证用户登入，没有以前的session的概念，很多人都会用token，比如用户登入成功后，生成一个token，然后每次请求都会带上这个token。
+
+
+这个一个不错的解决方案是 jwt(JSON Web Token).
+
+
+JWT 只考虑到协议的验证方法，不关系到数据的加密.
+
+
+JWT由三部分组成.
+
+header:
+
+    base64encode({
+            "alg":"HS256",
+            "typ":"JWT"
+            })
+
+
+Payload:
+
+    base64encode({
+        "iss":"xxx.com",
+        "exp":"1422323232",
+        "company":"xxx"
+    })
+
+
+Signature:
+
+    HMACSHA256(base64encode(header)+'.'+base64encode(Payload),secretKey)
+
+
+
+##怎么样对数据进行加密
+JWT并没有规定一定要用什么数据加密的过程,只是对签名进行了规范。
+
+如果要对私有数据进行加密，那可以在Payload对数据进行aes之类的加密，保证数据不会被破解(因为JWT只保证数据不会被更改，不能保证数据加密)
+
+
+
+
+
+[JWT SDK](http://jwt.io/ 'http://jwt.io/')
+
+
+[JWT 详细介绍](http://qqucg.com/211.html 'JWT')
+
+[draft-ietf-jose-json-web-encryption-40](https://tools.ietf.org/html/draft-ietf-jose-json-web-encryption-40 'https://tools.ietf.org/html/draft-ietf-jose-json-web-encryption-40')
+
+[10-things-you-should-know-about-tokens](http://alvinzhu.me/blog/2014/08/26/10-things-you-should-know-about-tokens/ 'http://alvinzhu.me/blog/2014/08/26/10-things-you-should-know-about-tokens/')
+
+
+[draft-ietf-oauth-json-web-token-27](https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-27 'https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-27')
