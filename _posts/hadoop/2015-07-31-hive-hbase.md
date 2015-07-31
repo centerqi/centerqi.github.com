@@ -22,7 +22,7 @@ tags : [hbase]
 
 2. 配置hive启动参数
 
-/usr/local/webserver/hive_udc/bin/hiveudc  --auxpath   /usr/local/webserver/hive_udc/lib/hive-hbase-handler-0.13.1.jar,/usr/local/webserver/hive_udc/lib/zookeeper-3.4.5.jar,/usr/local/webserver/hive_udc/lib/guava-11.0.2.jar,/usr/local/webserver/hbase/hbase-0.94.20.jar  --hiveconf hbase.zookeeper.quorum=idc02-hd-ds-b01,idc02-hd-ds-b02,idc02-hd-ds-b03 
+    /usr/local/webserver/hive_udc/bin/hiveudc  --auxpath   /usr/local/webserver/hive_udc/lib/hive-hbase-handler-0.13.1.jar,/usr/local/webserver/hive_udc/lib/zookeeper-3.4.5.jar,/usr/local/webserver/hive_udc/lib/guava-11.0.2.jar,/usr/local/webserver/hbase/hbase-0.94.20.jar  --hiveconf hbase.zookeeper.quorum=idc02-hd-ds-b01,idc02-hd-ds-b02,idc02-hd-ds-b03 
 
 
 
