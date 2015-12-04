@@ -60,7 +60,7 @@ scala中用的较多的依赖是 typesafe config
 
 1. 如果 deploy-mode cluster, 要把 application.conf上传到driver结点，通过--files指定就可以。
 
-     /usr/local/webserver/spark-sql/bin/spark-submit   --master yarn --deploy-mode cluster --queue spark --num-executors 4 --driver-memory 6g --executor-memory 20g --executor-cores 4 --files conf/application.conf   --class sparkstreaming.monitor.pay.Channel   lib/sparkstreaming.jar
+    /usr/local/webserver/spark-sql/bin/spark-submit   --master yarn --deploy-mode cluster --queue spark --num-executors 4 --driver-memory 6g --executor-memory 20g --executor-cores 4 --files conf/application.conf   --class sparkstreaming.monitor.pay.Channel   lib/sparkstreaming.jar
 
 2. 如果 deploy-mode client,可以指定本机目录
 
