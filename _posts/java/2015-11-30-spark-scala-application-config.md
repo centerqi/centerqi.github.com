@@ -51,3 +51,18 @@ scala中用的较多的依赖是 typesafe config
     val conf = ConfigFactory.load
     val configtopics = conf.getString("kafka.topics").split(",").toSet
 
+
+##自定义config文件
+
+    java -Dconfig.file=${applicationPath}/conf/application.conf
+
+##在spark中使用
+
+1. 如果 deploy-mode cluster, 要把 application.conf上传到driver结点，通过--files指定就可以。
+
+     /usr/local/webserver/spark-sql/bin/spark-submit   --master yarn --deploy-mode cluster --queue spark --num-executors 4 --driver-memory 6g --executor-memory 20g --executor-cores 4 --files conf/application.conf   --class sparkstreaming.monitor.pay.Channel   lib/sparkstreaming.jar
+
+2. 如果 deploy-mode client,可以指定本机目录
+
+    /usr/local/webserver/spark-sql/bin/spark-submit   --master yarn --deploy-mode cluster --queue spark --num-executors 4 --driver-memory 6g --executor-memory 20g --executor-cores 4 --files conf/application.conf --driver-java-options -Dconfig.file=conf/application.conf  --class sparkstreaming.monitor.pay.Channel   lib/sparkstreaming.jar
+
