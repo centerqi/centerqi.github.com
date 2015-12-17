@@ -35,3 +35,17 @@ tags : [scala]
             with Serializable {}
 
 
+##在String中扩展方法
+
+其实用implicit就可以搞定
+    
+    implicit class StringImprovements(s:String){def increment = s.map(c=>(c+1).toChar)}
+    val koudai="koudai"
+    scala> koudai.increment
+    res7: String = lpvebj
+
+
+##模板变量
+
+    scala> val templateStr=s"Hello ${koudai} "
+    templateStr: String = "Hello koudai ""
