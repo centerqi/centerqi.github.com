@@ -10,7 +10,7 @@ tags : [scala]
 
 其实与java中的一些方法存在对应关系。
 
-<table>
+<table class="table table-striped table-bordered">
 <tr><td>Scala 方法</td><td>Java中对应的实现</td></tr>
 <tr><td>classOf[T]</td><td>T.class</td></tr>
 <tr><td>obj.isInstanceOf[T]</td><td>obj instanceof T</td></tr>
