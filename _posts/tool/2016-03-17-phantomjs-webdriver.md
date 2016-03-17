@@ -74,7 +74,9 @@ tags : [data]
 	});
 
 
+
 ##注意点
+
 
 1. page.evaluate 方法是在沙盒中执行的，因此不能访问 phantom 对像，所以console.log()输出是不会到控制台点，除非你设置page.onConsoleMessage 方法.
 
