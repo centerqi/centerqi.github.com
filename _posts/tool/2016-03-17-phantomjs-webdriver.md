@@ -13,7 +13,7 @@ tags : [data]
 
 但是现在有一些工具，可以构造一个没有图形界面的浏览器，除了图形界面外，他拥有浏览器应该有的功能，比如dom解析，javascript支持，支持ajax请求之类。
 
-##Headless browser
+## Headless browser
 
 >A headless browser is a web browser without a graphical user interface.
 >Headless browsers provide automated control of a web page in an environment similar to popular web browsers, 
@@ -22,7 +22,7 @@ tags : [data]
 >including styling elements such as page layout, colour, font selection and execution of JavaScript and AJAX which are usually not available when using other testing methods
 
 
-##Phantomjs
+## Phantomjs
 
 1. phantomjs就是一个Headless browser.
 
@@ -73,10 +73,14 @@ tags : [data]
 	just_wait();	
 	});
 
+
 ##注意点
+
 1. page.evaluate 方法是在沙盒中执行的，因此不能访问 phantom 对像，所以console.log()输出是不会到控制台点，除非你设置page.onConsoleMessage 方法.
 
+
 2. 在page.evaluate中执行的操作，是异步的，可能你的页面操作还没完成，phantom已经结束了，如在 evaluate发起http请求，可能是不成功的,因此最好设置一个just_wait，官方实现了一个Waitfor的方法.
+
 
 3. includeJs和injectJs是完全不一样的， injectJs是不会把js加载到当面页面中去的。
 
