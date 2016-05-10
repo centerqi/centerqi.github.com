@@ -9,12 +9,15 @@ tagline: Supporting tagline
 没有程序员证的码农,和如下几位交情不错 `php, python, c`   
 爱翻源码,给 `php, nginx`做过内科手术  
 以前混饭于百度,现安居于口袋  
+
 ## 爱折腾
+
 linux是一个怎么折腾都可以的平台  
 `智能家居`爱好者  
 `Raspberry Pi`(树莓派)
 
 ## 命令控
+
 `vim`,`links`,`mutt`,`markdown`,`github`
 
 ## 数据控
