@@ -88,37 +88,37 @@ hadoop有一个sbin目录，还有一个bin目录。
 
 
 
-if [ "$COMMAND" = "namenode" ] ; then
-  CLASS='org.apache.hadoop.hdfs.server.namenode.NameNode'
-  HADOOP_OPTS="$HADOOP_OPTS $HADOOP_NAMENODE_OPTS"
-elif [ "$COMMAND" = "zkfc" ] ; then
-  CLASS='org.apache.hadoop.hdfs.tools.DFSZKFailoverController'
-  HADOOP_OPTS="$HADOOP_OPTS $HADOOP_ZKFC_OPTS"
-elif [ "$COMMAND" = "secondarynamenode" ] ; then
-  CLASS='org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode'
-  HADOOP_OPTS="$HADOOP_OPTS $HADOOP_SECONDARYNAMENODE_OPTS"
-elif [ "$COMMAND" = "datanode" ] ; then
-  CLASS='org.apache.hadoop.hdfs.server.datanode.DataNode'
-  if [ "$starting_secure_dn" = "true" ]; then
-    HADOOP_OPTS="$HADOOP_OPTS -jvm server $HADOOP_DATANODE_OPTS"
-  else
-    HADOOP_OPTS="$HADOOP_OPTS -server $HADOOP_DATANODE_OPTS"
-  fi
-elif [ "$COMMAND" = "journalnode" ] ; then
-  CLASS='org.apache.hadoop.hdfs.qjournal.server.JournalNode'
-  HADOOP_OPTS="$HADOOP_OPTS $HADOOP_JOURNALNODE_OPTS"
-elif [ "$COMMAND" = "dfs" ] ; then
-  CLASS=org.apache.hadoop.fs.FsShell
-  HADOOP_OPTS="$HADOOP_OPTS $HADOOP_CLIENT_OPTS"
-elif [ "$COMMAND" = "dfsadmin" ] ; then
-  CLASS=org.apache.hadoop.hdfs.tools.DFSAdmin
-  HADOOP_OPTS="$HADOOP_OPTS $HADOOP_CLIENT_OPTS"
-elif [ "$COMMAND" = "haadmin" ] ; then
-  CLASS=org.apache.hadoop.hdfs.tools.DFSHAAdmin
-  CLASSPATH=${CLASSPATH}:${TOOL_PATH}
-  HADOOP_OPTS="$HADOOP_OPTS $HADOOP_CLIENT_OPTS"
-elif [ "$COMMAND" = "fsck" ] ; then
-  CLASS=org.apache.hadoop.hdfs.tools.DFSck
+	if [ "$COMMAND" = "namenode" ] ; then
+	  CLASS='org.apache.hadoop.hdfs.server.namenode.NameNode'
+	  HADOOP_OPTS="$HADOOP_OPTS $HADOOP_NAMENODE_OPTS"
+	elif [ "$COMMAND" = "zkfc" ] ; then
+	  CLASS='org.apache.hadoop.hdfs.tools.DFSZKFailoverController'
+	  HADOOP_OPTS="$HADOOP_OPTS $HADOOP_ZKFC_OPTS"
+	elif [ "$COMMAND" = "secondarynamenode" ] ; then
+	  CLASS='org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode'
+	  HADOOP_OPTS="$HADOOP_OPTS $HADOOP_SECONDARYNAMENODE_OPTS"
+	elif [ "$COMMAND" = "datanode" ] ; then
+	  CLASS='org.apache.hadoop.hdfs.server.datanode.DataNode'
+	  if [ "$starting_secure_dn" = "true" ]; then
+	    HADOOP_OPTS="$HADOOP_OPTS -jvm server $HADOOP_DATANODE_OPTS"
+	  else
+	    HADOOP_OPTS="$HADOOP_OPTS -server $HADOOP_DATANODE_OPTS"
+	  fi
+	elif [ "$COMMAND" = "journalnode" ] ; then
+	  CLASS='org.apache.hadoop.hdfs.qjournal.server.JournalNode'
+	  HADOOP_OPTS="$HADOOP_OPTS $HADOOP_JOURNALNODE_OPTS"
+	elif [ "$COMMAND" = "dfs" ] ; then
+	  CLASS=org.apache.hadoop.fs.FsShell
+	  HADOOP_OPTS="$HADOOP_OPTS $HADOOP_CLIENT_OPTS"
+	elif [ "$COMMAND" = "dfsadmin" ] ; then
+	  CLASS=org.apache.hadoop.hdfs.tools.DFSAdmin
+	  HADOOP_OPTS="$HADOOP_OPTS $HADOOP_CLIENT_OPTS"
+	elif [ "$COMMAND" = "haadmin" ] ; then
+	  CLASS=org.apache.hadoop.hdfs.tools.DFSHAAdmin
+	  CLASSPATH=${CLASSPATH}:${TOOL_PATH}
+	  HADOOP_OPTS="$HADOOP_OPTS $HADOOP_CLIENT_OPTS"
+	elif [ "$COMMAND" = "fsck" ] ; then
+	  CLASS=org.apache.hadoop.hdfs.tools.DFSck
 
 
 这样就可以找到每一个命令的入口，也就找到了main方法，一个一个去阅读其实现。
