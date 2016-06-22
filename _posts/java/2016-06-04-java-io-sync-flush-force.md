@@ -67,7 +67,7 @@ force是FileChannel的一个方法
     public abstract void force(boolean metaData) throws IOException;
 
 
-    ## flush
+## flush
 
     flush 是 OutputStream类中的方法
 
