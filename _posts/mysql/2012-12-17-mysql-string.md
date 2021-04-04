@@ -1,6 +1,6 @@
 ---
 layout: post
-category :mysql 
+category: mysql 
 tags : [mysql]
 ---
 {% include JB/setup %}
