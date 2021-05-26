@@ -14,11 +14,16 @@ tags : [git]
 	git push -u origin master
 
 
+## git 多账户切换解决方案
+
+一个公司有两套 gitlab, git 默认会记住用户名和密码，如果有两套，系统记住会非常麻烦，所以通过如下设置，可以不记住用户名和密码
+
+	git config --local credential.helper ""
 
 
 ## 分支重命名
 
-https://stackoverflow.com/questions/30590083/how-do-i-rename-both-a-git-local-and-remote-branch-name
+[分支重命名](https://stackoverflow.com/questions/30590083/how-do-i-rename-both-a-git-local-and-remote-branch-name)
 
 
 ## push 到指定的分支
@@ -29,7 +34,8 @@ https://stackoverflow.com/questions/30590083/how-do-i-rename-both-a-git-local-an
 ## git 删除当前本地分支
 
 	git branch -d localBranchName
-	https://chinese.freecodecamp.org/news/how-to-delete-a-git-branch-both-locally-and-remotely/
+
+[git 删除当前本地分支](https://chinese.freecodecamp.org/news/how-to-delete-a-git-branch-both-locally-and-remotely/)
 
 
 ## git 从远程拉分支到本地并创建分支名
@@ -41,7 +47,7 @@ https://stackoverflow.com/questions/30590083/how-do-i-rename-both-a-git-local-an
 
 ## git 版本合并
 
-https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6
+[git 版本合并](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6)
 
 
 ## git 常用操作
