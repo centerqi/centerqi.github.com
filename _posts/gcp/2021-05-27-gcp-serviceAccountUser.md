@@ -22,10 +22,9 @@ tags : [gcp]
 
 	Service Account User(roles/iam.serviceAccountUser)
 
+![gcp deploy functions](/assets/images/gcp_deploy_functions.png)
 
-<img src="/assets/images/gcp_deploy_functions.png" />
 
-![alt text](https://github.com/favicon.ico)
 
 
 一定要选择上面两种权限才能通过 api 去发布函数。
