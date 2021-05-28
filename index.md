@@ -1,7 +1,7 @@
 ---
 layout: page
 title: thinking
-tagline: Supporting tagline
+tagline: 代码其实也是艺术 
 ---
 {% include JB/setup %}
 
